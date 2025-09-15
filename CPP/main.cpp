@@ -5,11 +5,11 @@ using namespace std;
 
 int main()
 {
-    vector<barang> daftarbarang;
+    vector<barang> daftarbarang; // vector untuk menyimpan data barang
 
-    int menu = 0;
-    string id, nama;
-    int harga, stok;
+    int menu = 0; // variabel untuk menyimpan pilihan menu
+    string id, nama; // variabel untuk menyimpan data barang
+    int harga, stok; // variabel untuk menyimpan data barang
 
     while (menu != 6) 
     {
@@ -27,7 +27,7 @@ int main()
         cout << "Masukkan perintah : ";
         cin >> menu;
 
-        if (menu == 1)
+        if (menu == 1) // menu nambah data Data
         {
             cout << "Silahkan masukkan data" << endl;
             cout << "ID : ";
@@ -39,53 +39,53 @@ int main()
             cout << "Stok : ";
             cin >> stok;
 
-            barang temp(id, nama, harga, stok);
-            daftarbarang.push_back(temp);
+            barang temp(id, nama, harga, stok); // buat objek barang dengan data yang dimasukkan
+            daftarbarang.push_back(temp); // tambahkan objek barang ke vector daftarbarang
             cout << "Data berhasil ditambahkan!" << endl << endl;
 
-        } else if (menu == 2)
+        } else if (menu == 2) // menu hapus data
         {
             cout << "Masukkan ID data yang ingin dihapus : ";
             cin >> id;
 
-            bool ketemu = false;
-            auto it = daftarbarang.begin();
-            while (it != daftarbarang.end())
+            bool ketemu = false; // variabel untuk menandai apakah data ditemukan atau tidak
+            auto it = daftarbarang.begin(); // iterator untuk traversing vector
+            while (it != daftarbarang.end()) // gunakan iterator untuk traversing vector
             {
-                if (it->cariid(id))
+                if (it->cariid(id)) // jika id yang dicari ditemukan
                 {
-                    it = daftarbarang.erase(it);
+                    it = daftarbarang.erase(it); // hapus data dari vector
                     ketemu = true;
                     cout << "Data berhasil dihapus!" << endl << endl;
                     break;
                 } else {
-                    ++it;
+                    ++it; // jika id tidak ditemukan, lanjutkan ke data berikutnya
                 }
             }
 
-            if (!ketemu)
+            if (!ketemu) // jika data tidak ditemukan
             {
                 cout << "Data gaada" << endl << endl;
             }
 
-        } else if (menu == 3)
+        } else if (menu == 3) // buat menu update data
         {
             cout << "Masukkan ID yang ingin diupdate : ";
             cin >> id;
 
-            barang* barangketemu = nullptr;
-            auto it = daftarbarang.begin();
-            while (it != daftarbarang.end())
+            barang* barangketemu = nullptr; // pointer untuk menyimpan alamat barang yang ditemukan
+            auto it = daftarbarang.begin(); // iterator untuk traversing vector
+            while (it != daftarbarang.end()) // gunakan iterator untuk traversing vector
             {
-                if (it->cariid(id))
+                if (it->cariid(id)) // jika id yang dicari ditemukan
                 {
-                    barangketemu = &(*it);
+                    barangketemu = &(*it); // simpan alamat barang yang ditemukan
                     break;
                 }
-                ++it;
+                ++it; // jika id tidak ditemukan, lanjutkan ke data berikutnya
             }
 
-            if (barangketemu != nullptr)
+            if (barangketemu != nullptr) // jika barang ditemukan
             {
                 cout << "Nama : " << barangketemu->getnama() << endl;
                 cout << "Harga : " << barangketemu->getharga() << endl;
@@ -98,22 +98,22 @@ int main()
                 cout << "Masukkan Stok Baru : ";
                 cin >> stok;
 
-                barangketemu->editData(nama, harga, stok);
+                barangketemu->editData(nama, harga, stok); // update data barang yang ditemukan
                 cout << "Data berhasil diupdate!" << endl << endl;
 
             } else {
                 cout << "Data gaada" << endl << endl;
             }
 
-        } else if (menu == 4)
+        } else if (menu == 4) // buat menu lihat data
         {
-            if (daftarbarang.empty())
+            if (daftarbarang.empty()) // jika vector daftarbarang kosong
             {
                 cout << "Data kosong" << endl << endl;
             } else {
                 cout << "No, ID, Nama, Harga, Stok:" << endl;
         int nomor = 1;
-        for (barang& p : daftarbarang)
+        for (barang& p : daftarbarang) // pake range-based for loop untuk traversing vector
         {
             cout << nomor << ". " 
                  << p.getid() << ", " 
@@ -125,24 +125,24 @@ int main()
         cout << endl;
     }
 
-        } else if (menu == 5)
+        } else if (menu == 5) // buat menu cari data
         {
             cout << "Masukkan ID yang ingin dicari : ";
             cin >> id;
 
-            barang* barangketemu = nullptr;
-            auto it = daftarbarang.begin();
-            while (it != daftarbarang.end())
+            barang* barangketemu = nullptr; // pointer untuk menyimpan alamat barang yang ditemukan
+            auto it = daftarbarang.begin(); // iterator untuk traversing vector
+            while (it != daftarbarang.end()) // gunakan iterator untuk traversing vector
             {
-                if (it->cariid(id)) 
+                if (it->cariid(id))  // jika id yang dicari ditemukan
                 {
                     barangketemu = &(*it);
                     break;
                 }
-                ++it;
+                ++it; // jika id tidak ditemukan, lanjutkan ke data berikutnya
             }
 
-            if (barangketemu != nullptr)
+            if (barangketemu != nullptr) // jika barang ditemukan
             {
                 cout << "Ini data dengan ID " << id << " :" << endl;
                 cout << "Nama : " << barangketemu->getnama() << endl;
@@ -152,7 +152,7 @@ int main()
                 cout << "Data gaada" << endl << endl;
             }
 
-        } else if (menu == 6)
+        } else if (menu == 6) // menu keluar
         {
             cout << "dadah" << endl;
         } else {

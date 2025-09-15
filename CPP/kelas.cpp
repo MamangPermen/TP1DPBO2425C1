@@ -5,13 +5,13 @@ using namespace std;
 class barang
 {
 
-private:
+private: // atribut
     string id;
     string nama;
     int harga;
     int stok;
 
-public:
+public: // method
     barang(){}
 
     barang(string id, string nama, int harga, int stok)
@@ -22,26 +22,26 @@ public:
         this->stok = stok;
     }
 
-    void setid(string id) {this->id = id;}
-    string getid() {return this->id;}
+    void setid(string id) {this->id = id;} // setter id
+    string getid() {return this->id;} // getter id
 
-    void setnama(string nama) {this->nama = nama;}
-    string getnama() {return this->nama;}
+    void setnama(string nama) {this->nama = nama;} // setter nama
+    string getnama() {return this->nama;} // getter nama
 
-    void setharga(int harga) {this->harga = harga;}
-    int getharga() {return this->harga;}
+    void setharga(int harga) {this->harga = harga;} // setter harga
+    int getharga() {return this->harga;} // getter harga
 
-    void setstok(int stok) {this->stok = stok;}
-    int getstok() {return this->stok;}
+    void setstok(int stok) {this->stok = stok;} // setter stok
+    int getstok() {return this->stok;} // getter stok
 
-    void editData(string nama, int harga, int stok)
+    void editData(string nama, int harga, int stok) // method edit data
     {
         this->nama = nama;
         this->harga = harga;
         this->stok = stok;
     }
 
-    bool cariid(string id) {return this->id == id;}
+    bool cariid(string id) {return this->id == id;} // method cari id
 
     ~barang() {}
 };
