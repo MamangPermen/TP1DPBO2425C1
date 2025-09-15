@@ -1,5 +1,6 @@
 class Barang:
     def __init__(self, id, nama, harga, stok):
+        """Inisialisasi data produk"""
         self.id = id
         self.nama = nama
         self.harga = harga
@@ -16,5 +17,5 @@ class Barang:
         return self.id == id
 
     def __str__(self):
-        """Representasi string untuk tampilan simpel"""
+        """Representasi string untuk tampilan """
         return f"{self.id}, {self.nama}, {self.harga}, {self.stok}"
