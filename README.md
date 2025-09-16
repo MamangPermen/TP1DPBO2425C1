@@ -64,3 +64,15 @@ Gunakan iterator (C++), removeIf (Java), enumerate (Python) untuk hapus/update
 - Edit dan hapus via parameter URL (?edit=..., ?hapus=...)
 
 ## Dokumentasi
+### C++
+![alt text](https://github.com/MamangPermen/TP1DPBO2425C1/blob/main/Screenshots/cpp.png?raw=true)
+
+### JAVA
+![alt text](https://github.com/MamangPermen/TP1DPBO2425C1/blob/main/Screenshots/java.png?raw=true)
+
+### PYTHON
+![alt text](https://github.com/MamangPermen/TP1DPBO2425C1/blob/main/Screenshots/py.png?raw=true)
+
+### PHP
+![alt text](https://github.com/MamangPermen/TP1DPBO2425C1/blob/main/Screenshots/php1.png?raw=true)
+![alt text](https://github.com/MamangPermen/TP1DPBO2425C1/blob/main/Screenshots/php2.png?raw=true)
