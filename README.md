@@ -2,9 +2,9 @@
 ## Janji
 Saya Nadhif Arva Anargya dengan NIM 2404336 mengerjakan Tugas Praktikum 1 dalam mata kuliah Desain Pemrograman Berbasis Objek untuk keberkahanNya maka saya tidak melakukan kecurangan seperti yang telah dispesifikasikan.
 
+## 🛠 ️Desain(C++, Java, Python)
 Program ini merupakan aplikasi sederhana untuk mengelola data barang menggunakan Object-Oriented Programming (OOP) di C++, Java, Python, dan PHP. Program memudahkan user untuk CRUD dan mencari data barang elektronik untuk keberlangsungan toko elektronik koh Ah Fung.
 
-## 🛠 ️Desain(C++, Java, Python)
 ### 1. Struktur Kelas barang
 Kelas barang merupakan representasi dari entitas barang dalam sistem. Setiap objek barang memiliki atribut dan method sebagai berikut:
 ##### Entitas Utama: Barang
