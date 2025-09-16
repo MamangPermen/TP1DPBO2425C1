@@ -33,7 +33,8 @@ int main()
             cout << "ID : ";
             cin >> id;
             cout << "Nama : ";
-            cin >> nama;
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            getline(cin, nama);
             cout << "Harga : ";
             cin >> harga;
             cout << "Stok : ";
@@ -92,7 +93,8 @@ int main()
                 cout << "Stok : " << barangketemu->getstok() << endl << endl;
 
                 cout << "Masukkan Nama Baru : ";
-                cin >> nama;
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                getline(cin, nama);
                 cout << "Masukkan Harga Baru : ";
                 cin >> harga;
                 cout << "Masukkan Stok Baru : ";
